@@ -1,4 +1,13 @@
-# TRAINING-TIME DOMAIN TRANSFER FOR GENERATOR-FREE DIAGNOSTICS ON NOVEL MODALITIES IN COMPUTATIONAL PATHOLOGY
+<h1 align="center">TRAINING-TIME DOMAIN TRANSFER FOR GENERATOR-FREE DIAGNOSTICS ON NOVEL MODALITIES IN COMPUTATIONAL PATHOLOGY</h1>
+
+<div align="center">
+
+**Julia A. Mielcarz, Andrea Camilloni, Nita Mulliqi, Jessica A. Frank, Anders Blilie, Emilius A.M. Janssen, Martin Eklund, Kimmo Kartasalo**
+
+<a href="https://arxiv.org/abs/2611.02931"><img src="https://img.shields.io/badge/arXiv-2611.02931-b31b1b.svg?style=for-the-badge" alt="arXiv:2611.02931"></a>
+
+</div>
+
 
 ## Abstract
 
@@ -23,6 +32,7 @@ The pipeline has two parts:
 1. **Generative model** (this repository): paired image-to-image translation between unstained and H&E-stained tissue, used for virtual staining (inference-time baseline) and virtual unstaining (training-time transfer).
 2. **Diagnostic model** (built on Mulliqi et al., see [below](#diagnostic-model)): a multiple instance learning model adapted to benign vs. malignant classification, trained on H&E slides either directly or on synthetic unstained images produced by the generative model.
 
+
 This repository contains the code of the generative model:
 
 | Script | Purpose |
@@ -35,8 +45,6 @@ This repository contains the code of the generative model:
 ```
 pip install -r requirements.txt
 ```
-
----
 
 ## Generative model
 
@@ -136,7 +144,6 @@ Options:
 
 Run `python inference.py --help` for all options.
 
----
 
 ## Diagnostic model
 
